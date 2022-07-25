@@ -1,0 +1,19 @@
+.bg-img{
+  background-image: url('../Assets/Thobes/ThobeImg.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}
+.text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem 0;
+}
+.btn:hover{
+  background-color: #495057;
+}
+.img{
+  width: 100%;
+}
