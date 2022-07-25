@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
+import Logo from './Assets/LOGO.png'
+import '../Components/Style/Navbar.css'
 const DisplayFlex = styled.nav`
   display: flex;
   justify-content: space-around;
@@ -19,11 +21,10 @@ function Navbar() {
   return (
     <header>
       <DisplayFlex>
-        <a>MuslimStoreShop</a>
+        <Link to="/"><img src={Logo} width="50"/></Link>
         <SpaceBtwn>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/shop">Shop</Link>
+          <Link to="/" className="link">Home</Link>
+          <Link to="/shop" className="link">Shop</Link>
         </SpaceBtwn>
         <a>Cart</a>
       </DisplayFlex>
