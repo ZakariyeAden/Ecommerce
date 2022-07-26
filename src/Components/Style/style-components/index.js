@@ -11,6 +11,8 @@ export const Container = styled.section`
   max-width: 1440px;
 `;
 export const Button = styled.button`
+  display:inline-block;
+  cursor:pointer;
   font-size:1rem;
   border:none;
   background-color:#3a3a3a;
@@ -23,7 +25,13 @@ export const SectionContainer = styled.div`
 export const Image2 = styled.img`
   width:98%
 `;
+// Product Section
 
+export const ProductHeading = styled.h1`
+  font-size: 1.3rem;
+  letter-spacing: 0.2em;
+  color: #3a3a3a;
+`;
 // Reuseable
 export const SecondaryHeading = styled.h3`
   font-size:2rem;
@@ -44,4 +52,8 @@ export const FooterHeading = styled.h5`
   font-size:1.3rem;
   font-weight:400;
   font-style:normal;
+`;
+export const Column = styled.div`
+  display:flex;
+  flex-direction:column;
 `;
