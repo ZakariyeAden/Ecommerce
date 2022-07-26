@@ -40,3 +40,8 @@ export const Description = styled.p`
   line-height:1.5;
   font-weight:100;
 `;
+export const FooterHeading = styled.h5`
+  font-size:1.3rem;
+  font-weight:400;
+  font-style:normal;
+`;
