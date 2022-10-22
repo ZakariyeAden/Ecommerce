@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom'
 import Logo from './Assets/LOGO.png'
 import '../Components/Style/Navbar.css'
+import CartButton from "./Cart/CartButton";
+
 const DisplayFlex = styled.nav`
   display: flex;
   justify-content: space-around;
@@ -26,7 +28,7 @@ function Navbar() {
           <Link to="/" className="link">Home</Link>
           <Link to="/shop" className="link">Shop</Link>
         </SpaceBtwn>
-        <a>Cart</a>
+        <CartButton/>
       </DisplayFlex>
     </header>
   );
