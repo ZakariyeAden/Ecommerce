@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Product from '../Shop/Product'
 
 function Shop() {
   return (
-    <div>
+    <Fragment>
     <div className="bg-img">
-    <h1>Heading</h1>
+    <h1>Our Thobes and Abayas</h1>
     </div>
       <Product/>
-    </div>
+    </Fragment>
   )
 }
 
