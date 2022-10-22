@@ -57,3 +57,12 @@ export const Column = styled.div`
   display:flex;
   flex-direction:column;
 `;
+export const Btn = styled.button`
+  display:inline-block;
+  cursor:pointer;
+  font-size:1rem;
+  border:none;
+  background-color:#3a3a3a;
+  padding: 1rem 4rem;
+  color:#fff;
+`;
