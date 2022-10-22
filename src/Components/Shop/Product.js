@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import ProductItems from './ProductItems';
 import products from './index'
 import { Grid } from "@mui/material";
+
 function Product() {
+
   return (
-    <div>
+    <>
      <main>
     <Grid container spacing={4}>
       {products.map((product) => (
@@ -20,7 +22,7 @@ function Product() {
       ))}  
       </Grid>
      </main>
-    </div>
+    </>
   )
 }
 

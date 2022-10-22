@@ -33,7 +33,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 11.99,
     title: "Abaya Cream",
     src: AbayaCream,
-    width:"200",
+    width:"200",    
     button:"Add to Cart",
   },
   {
@@ -42,6 +42,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Green Abaya",
     src: GreenAbaya,
     width:"200",
+   
     button:"Add to Cart",
   },
   {
