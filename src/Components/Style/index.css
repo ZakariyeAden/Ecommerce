@@ -19,3 +19,14 @@ body{
  background-color:  #3a3a3a;
  width: 100%;
 }
+.price{
+  margin-bottom: 1rem;
+}
+.btncart{
+  border: none;
+  cursor: pointer;
+}
+.icon{
+  font-size: 2rem;
+  background-color: none;
+}
