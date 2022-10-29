@@ -6,6 +6,7 @@ const cartSlice = createSlice({
     items: [],
     totalQuantity: 0,
     changed: false,
+    singleProduct: {},
   },
   reducers: {
     replaceCart(state, action) {

@@ -5,16 +5,20 @@ import Home from "./Components/Pages/Home";
 import Cart from "./Components/Cart/Cart";
 import Shop from "./Components/Pages/Shop";
 import Footer from "./Components/Pages/Footer";
+import ProductDetail from "./Components/Shop/ProductDetail";
 import { useSelector } from "react-redux";
+
 function App() {
   const showCart = useSelector(state => state.ui.cartIsVisible)
   return (
     <Fragment>
       <Navbar/>
-      {showCart && <Cart/>}
+      {/* {showCart && <Cart/>} */}
       <Routes>
         <Route path="/"  element={<Home />}/>
         <Route path="/shop"  element={<Shop />}/>
+        <Route path="/shop:id"  element={<ProductDetail/>}/>
+        <Route path="/cart"  element={<Cart />}/>
       </Routes>
       <Footer/>
     </Fragment>
