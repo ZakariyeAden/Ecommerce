@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
 import Product from '../Shop/Product'
-
+import { ShopHeading } from '../Style/style-components/index'
 function Shop() {
   return (
     <Fragment>
     <div className="bg-img">
-    <h1>Our Thobes and Abayas</h1>
+    <div className="text-box">
+    <ShopHeading>Our Thobes and Abayas</ShopHeading>
+    </div>
     </div>
       <Product/>
     </Fragment>
