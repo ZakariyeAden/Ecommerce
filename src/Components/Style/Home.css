@@ -3,6 +3,8 @@
   background-position: center;
   background-size: cover;
   height: 90vh;
+  display: flex;
+  justify-content: center;
 }
 .text-box{
   display: flex;
