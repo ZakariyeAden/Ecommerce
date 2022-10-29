@@ -1,6 +1,7 @@
 import React from "react";
 import { SectionContainer,ProductHeading,Column,Btn } from "../Style/style-components";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
 import { cartActions } from "../Store/cart-slice";
 function ProductItems(props) {
@@ -19,17 +20,20 @@ const addItemToCartHandler = () => {
     })
   );
 };
+
+
   return (
     <>
       <SectionContainer>
-          <Grid item xs={3} >
+          {/* <Grid item xs={3} > */}
             <img src={src} width={width}/>
             <Column>
               <ProductHeading>{title}</ProductHeading>
               <span className="price">${price}</span>
-              <Btn onClick={addItemToCartHandler}>{button}</Btn>
-            </Column>
-          </Grid>
+              
+              <Button onClick={addItemToCartHandler} variant="contained" >Add to Cart</Button>
+            </Column>  
+          {/* </Grid> */}
       </SectionContainer>
     </>
   );
