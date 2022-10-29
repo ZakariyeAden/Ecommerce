@@ -12,6 +12,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 12.99,
     title: "Gold Thobe",
     src: GoldThobe,
+    description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
   {
@@ -19,6 +20,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 12.99,
     title: "White Thobe",
     src: WhiteThobe,
+    description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
   {
@@ -26,6 +28,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 12.99,
     title: "Brown Thobe",
     src: BrownThobe,
+    description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
   {
@@ -33,7 +36,8 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 11.99,
     title: "Abaya Cream",
     src: AbayaCream,
-    width:"200",    
+    width:"200", 
+    description:"Tax included. Shipping calculated at checkout.",   
     button:"Add to Cart",
   },
   {
@@ -41,6 +45,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 11.99,
     title: "Green Abaya",
     src: GreenAbaya,
+    description:"Tax included. Shipping calculated at checkout.",
     width:"200",
    
     button:"Add to Cart",
@@ -51,6 +56,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Black Cap",
     src: BlackCap,
     width:"200",
+    description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
   {
@@ -59,6 +65,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Gray Cap",
     src: GrayCap,
     width:"200",
+    description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
 ];
