@@ -25,9 +25,19 @@ export const SectionContainer = styled.div`
 export const Image2 = styled.img`
   width:98%
 `;
+
+// Shop Section
+export const ShopHeading = styled.h2`
+  font-size: 3rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  font-style: bold;
+  font-weight: 700;
+  text-align:center;
+`;
 // Product Section
 
-export const ProductHeading = styled.h1`
+export const ProductHeading = styled.h4`
   font-size: 1.3rem;
   letter-spacing: 0.2em;
   color: #3a3a3a;
