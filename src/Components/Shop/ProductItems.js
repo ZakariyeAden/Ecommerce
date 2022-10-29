@@ -32,7 +32,7 @@ function ProductItems(props) {
           <Column>
             <ProductHeading>{title}</ProductHeading>
             <span className="price">${price}</span>
-            <Button onClick={addItemToCartHandler} variant="contained" >Add to Cart</Button>
+            {/* <Button onClick={addItemToCartHandler} variant="contained" >Add to Cart</Button> */}
           </Column>
         </Link>
       </SectionContainer>
