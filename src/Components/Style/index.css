@@ -30,4 +30,15 @@ body{
 .icon{
   font-size: 2rem;
   background-color: none;
+  position: absolute;
+}
+.badge{
+  position: relative;
+  left: 18px;
+  bottom: -2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 39px;
+  background-color: red;
+  color: #000;
 }
