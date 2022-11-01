@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from 'react-router-dom'
-import Logo from './Assets/LOGO.png'
-import '../Components/Style/Navbar.css'
-import CartButton from "./Cart/CartButton";
+import Logo from '../Assets/LOGO.png'
+import '../Style/Navbar.css'
+import CartButton from "../Cart/CartButton";
 
 const DisplayFlex = styled.nav`
   display: flex;

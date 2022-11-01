@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import { Routes,Route } from 'react-router-dom'
 import Home from "./Components/Pages/Home";
 import Cart from "./Components/Cart/Cart";
