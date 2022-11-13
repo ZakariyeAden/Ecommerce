@@ -4,7 +4,6 @@ import {
   Container,
   MainHeading,
   Button,
-  Image,
 } from "../Style/style-components";
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";

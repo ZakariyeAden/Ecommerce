@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Product from '../Shop/Product'
+import Product from '../Shop/Product/Product'
 import { ShopHeading } from '../Style/style-components/index'
 function Shop() {
   return (
