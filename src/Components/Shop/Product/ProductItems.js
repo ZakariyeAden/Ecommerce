@@ -4,6 +4,7 @@ import {
   ProductHeading,
   Column,
   Btn,
+  Image
 } from "../../Style/style-components";
 import { Grid, Button } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -13,7 +14,7 @@ import { ProductsContext } from '../../Context'
 import PropTypes from "prop-types";
 const ProductItems = (props) => {
 
-  const { id, title, price, image } = props.product;
+  const { id, title, price, image,width } = props.product;
 
   const dispatch = useDispatch();
 
@@ -45,7 +46,7 @@ const ProductItems = (props) => {
       <SectionContainer>
           <Grid item>
         {/* <Link to={`details/${id}`}> */}
-            <img src={image}  />
+            <img src={image} width={width} />
         {/* </Link> */}
             <Column>
               <ProductHeading>{title}</ProductHeading>
