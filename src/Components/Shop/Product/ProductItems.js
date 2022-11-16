@@ -3,10 +3,9 @@ import {
   SectionContainer,
   ProductHeading,
   Column,
-  Btn,
-  Image
+  Btn
 } from "../../Style/style-components";
-import { Grid, Button } from "@mui/material";
+import { Grid,  } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../Store/cart-slice";
@@ -45,16 +44,18 @@ const ProductItems = (props) => {
     <>
       <SectionContainer>
           <Grid item>
-        {/* <Link to={`details/${id}`}> */}
+        <div onClick={() => value.handleDetail(id)}>   
+        <Link to={`/details${id}`}>
             <img src={image} width={width} />
-        {/* </Link> */}
+        </Link>
             <Column>
               <ProductHeading>{title}</ProductHeading>
               <span className="price">${price}</span>
-              <Button onClick={addItemToCartHandler} variant="contained">
+              <Btn onClick={addItemToCartHandler}  className="btn">
                 Add to Cart
-              </Button>
+              </Btn>
             </Column>
+        </div>
           </Grid>
       </SectionContainer>
     </>
