@@ -40,6 +40,7 @@ const  ProductsProvider = (props) => {
   const closeModal = () => {
     setmodalOpen(false);
   };
+  
 console.log(products);
   return (
     <ProductsContext.Provider 
