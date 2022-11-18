@@ -3,7 +3,8 @@ import {
   SectionContainer,
   ProductHeading,
   Column,
-  Btn
+  Btn,
+  Image
 } from "../../Style/style-components";
 import { Grid,  } from "@mui/material";
 import { Link } from "react-router-dom";

@@ -11,7 +11,7 @@ const value = useContext(ProductsContext);
     <Grid container spacing={4}>
     {value.productsList && value.productsList.map(product=>{
         return (
-          <ProductItems product={product} key={product.id}/>
+          <ProductItems product={product} key={product.id} />
         )
       })}
       </Grid>
