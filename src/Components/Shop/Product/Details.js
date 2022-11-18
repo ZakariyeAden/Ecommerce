@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 import { cartActions } from "../../Store/cart-slice";
 import { useDispatch } from "react-redux";
 import {
-  SectionContainer,
+  DetailContainer,
   ProductHeading,
   Column,
 } from "../../Style/style-components";
@@ -28,7 +28,8 @@ const Details = props => {
     title,
     price,
     image,
-    description
+    description,
+    detailWidth,
   } = value.productDetail;
   console.log(image);
 
@@ -45,19 +46,22 @@ const Details = props => {
     );
   };
   return (
-    <SectionContainer>
-      <Grid container spacing={2}>
-        <Grid item>
-          <img src={image} />
-        </Grid>
-        <Grid item>
+    <DetailContainer>
+    <Grid container spacing={7} >
+    <Grid  md={6} >
+          <img src={image} width={detailWidth}/>
+       </Grid>
+       <Grid  md={6} >
+        <Column>
           <h3>{title}</h3>
           <p>{description}</p>
           <span>{price}</span>
           <button onClick={addItemToCartHandler}>Add to Cart</button>
-        </Grid>
-      </Grid>
-    </SectionContainer>
+        
+          </Column>
+          </Grid>
+    </Grid>
+    </DetailContainer>
   );
 };
 
