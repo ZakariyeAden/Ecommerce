@@ -22,6 +22,12 @@ export const Button = styled.button`
 export const SectionContainer = styled.div`
   padding:7rem 4rem;
 `;
+export const DetailContainer = styled.div`
+  padding:7rem 12rem;
+  display:flex;
+  justify-content:center;
+`;
+
 export const Image2 = styled.img`
   width:98%
 `;
@@ -50,7 +56,7 @@ export const SecondaryHeading = styled.h3`
   text-align:center;
 `;
 export const Image = styled.img`
-  width:100%
+  width:10%
 `;
 export const Description = styled.p`
   text-align:center;
