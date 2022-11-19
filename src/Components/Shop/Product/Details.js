@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ProductsContext } from "../../Context";
 import { Link } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { cartActions } from "../../Store/cart-slice";
 import { useDispatch } from "react-redux";
 import {
   DetailContainer,
   ProductHeading,
-  Column,
+  ColumnGap,
+  Btn,
 } from "../../Style/style-components";
 
 const Details = props => {
@@ -23,16 +24,9 @@ const Details = props => {
     setProducts({ ...item });
     console.log(products);
   }, []);
-  const {
-    id,
-    title,
-    price,
-    image,
-    description,
-    detailWidth,
-  } = value.productDetail;
+  const { id, title, price, image, description, detailWidth } =
+    value.productDetail;
   console.log(image);
-
 
   const dispatch = useDispatch();
 
@@ -47,20 +41,21 @@ const Details = props => {
   };
   return (
     <DetailContainer>
-    <Grid container spacing={7} >
-    <Grid  md={6} >
-          <img src={image} width={detailWidth}/>
-       </Grid>
-       <Grid  md={6} >
-        <Column>
-          <h3>{title}</h3>
-          <p>{description}</p>
-          <span>{price}</span>
-          <button onClick={addItemToCartHandler}>Add to Cart</button>
-        
-          </Column>
-          </Grid>
-    </Grid>
+      <Grid container spacing={3}>
+        <Grid md={6} sm={8}>
+          <img src={image} width={detailWidth} />
+        </Grid>
+        <Grid md={6} sm={4}>
+          <ColumnGap>
+            <h3 className="detail-heading">{title}</h3>
+            <p>{description}</p>
+            <span>{price}</span>
+            <Btn onClick={addItemToCartHandler} variant="outlined">
+              Add to Cart
+            </Btn>
+          </ColumnGap>
+        </Grid>
+      </Grid>
     </DetailContainer>
   );
 };
