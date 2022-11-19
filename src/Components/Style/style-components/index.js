@@ -23,9 +23,10 @@ export const SectionContainer = styled.div`
   padding:7rem 4rem;
 `;
 export const DetailContainer = styled.div`
-  padding:7rem 12rem;
+  padding:7rem 8rem;
   display:flex;
   justify-content:center;
+  align-items:center;
 `;
 
 export const Image2 = styled.img`
@@ -56,7 +57,7 @@ export const SecondaryHeading = styled.h3`
   text-align:center;
 `;
 export const Image = styled.img`
-  width:10%
+  width:98%
 `;
 export const Description = styled.p`
   text-align:center;
@@ -72,6 +73,11 @@ export const FooterHeading = styled.h5`
 export const Column = styled.div`
   display:flex;
   flex-direction:column;
+`;
+export const ColumnGap = styled.div`
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
 `;
 export const Btn = styled.button`
   display:inline-block;
