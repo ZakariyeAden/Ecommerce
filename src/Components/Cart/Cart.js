@@ -1,6 +1,6 @@
-import { useSelector } from 'react-redux'
-import React from 'react'
-import CartItem from './CartItem'
+import { useSelector } from "react-redux";
+import React from "react";
+import CartItem from "./CartItem";
 import {
   Table,
   TableBody,
@@ -11,37 +11,44 @@ import {
   Paper,
 } from "@mui/material";
 function Cart(props) {
-  const cartItems = useSelector(state => state.cart.items)
+  const cartItems = useSelector(state => state.cart.items);
   return (
     <div>
       <h4>Your Cart</h4>
       <TableContainer component={Paper}>
-      <Table  aria-label="simple table">
-      <TableHead>
-          <TableRow>
-            <TableCell>Image</TableCell>
-            <TableCell align="right">Title</TableCell>
-            <TableCell align="right">Price</TableCell>
-            <TableCell align="right">Quantity</TableCell>
-          </TableRow>
-        </TableHead>
-      </Table>
-    </TableContainer>
-     
-      {cartItems.map(item => (
-        <CartItem
-          key={item.id}
-          item={{
-            id:item.id,
-            title:item.name,
-            quantity:item.quantity,
-            total:item.totalPrice,
-            price:item.price,
-          }}
-        />
-      ))}
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Image</TableCell>
+              <TableCell align="right">Title</TableCell>
+              <TableCell align="right">Price</TableCell>
+              <TableCell align="right">Quantity</TableCell>
+            </TableRow>
+          </TableHead>
+        </Table>
+      </TableContainer>
+      {cartItems.length > 0 ? (
+        <div>
+          {cartItems.map(item => (
+            <CartItem
+              key={item.id}
+              item={{
+                id: item.id,
+                title: item.name,
+                quantity: item.quantity,
+                total: item.totalPrice,
+                price: item.price,
+              }}
+            />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <h4 className="cart-heading">Cart is Empty</h4>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
