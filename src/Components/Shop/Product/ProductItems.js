@@ -47,7 +47,9 @@ const ProductItems = (props) => {
           <Grid item>
         <div onClick={() => value.handleDetail(id)}>   
         <Link to={`/details${id}`}>
+        <div className="wrapper">
             <img src={image} width={width} />
+            </div>
         </Link>
             <Column>
               <ProductHeading>{title}</ProductHeading>
