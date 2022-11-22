@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 function Cart(props) {
   const cartItems = useSelector(state => state.cart.items);
+  
   return (
     <div>
       <h4>Your Cart</h4>
@@ -38,6 +39,8 @@ function Cart(props) {
                 quantity: item.quantity,
                 total: item.totalPrice,
                 price: item.price,
+                image:item.image,
+               
               }}
             />
           ))}
