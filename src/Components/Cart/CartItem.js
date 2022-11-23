@@ -11,9 +11,10 @@ import {
   Paper,
 } from "@mui/material";
 
+
 function CartItem(props) {
   const dispatch = useDispatch();
-  const { title, price, id, quantity } = props.item;
+  const { title, price, id, quantity,image } = props.item;
 
   const removeItemHandler = () => {
     dispatch(cartActions.removeItemFromCart(id));
@@ -25,11 +26,12 @@ function CartItem(props) {
         id,
         title,
         price,
+        image
       })
     );
   };
 
-  console.log(title, price);
+  console.log(title, price, image);
   return (
     <TableContainer component={Paper}>
       <Table  aria-label="simple table">
@@ -37,7 +39,7 @@ function CartItem(props) {
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <TableCell component="th" scope="row">
-              Image
+              <img src={image} />
             </TableCell>
             <TableCell align="right">{title}</TableCell>
             <TableCell align="right">{price}</TableCell>
