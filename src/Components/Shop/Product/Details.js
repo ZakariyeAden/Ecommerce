@@ -36,6 +36,7 @@ const Details = props => {
         id,
         title,
         price,
+        image,
       })
     );
   };
