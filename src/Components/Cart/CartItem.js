@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { cartActions } from "../Store/cart-slice";
+import { connect } from "react-redux";
+import { removeFromCart } from "../Redux/Actions/cart-action";
 import {
   Table,
   TableBody,
@@ -12,26 +12,7 @@ import {
 } from "@mui/material";
 
 
-function CartItem(props) {
-  const dispatch = useDispatch();
-  const { title, price, id, quantity,image } = props.item;
-
-  const removeItemHandler = () => {
-    dispatch(cartActions.removeItemFromCart(id));
-  };
-
-  const addItemHandler = () => {
-    dispatch(
-      cartActions.addItemToCart({
-        id,
-        title,
-        price,
-        image
-      })
-    );
-  };
-
-  console.log(title, price, image);
+function CartItem({item , removeFromCart}) {
   return (
     <TableContainer component={Paper}>
       <Table  aria-label="simple table">
@@ -39,14 +20,15 @@ function CartItem(props) {
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <TableCell component="th" scope="row">
-              <img src={image} />
+              <img src={item.image} />
             </TableCell>
-            <TableCell align="right">{title}</TableCell>
-            <TableCell align="right">{price}</TableCell>
+            <TableCell align="right">{item.title}</TableCell>
+            <TableCell align="right">{item.price}</TableCell>
             <TableCell align="right">
-            <button onClick={removeItemHandler}>-</button>
+            {/* <button onClick={removeItemHandler}>-</button>
             {quantity}
-              <button onClick={addItemHandler}>+</button>
+              <button onClick={addItemHandler}>+</button> */}
+              <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </TableCell>
   
           </TableRow>
@@ -56,4 +38,10 @@ function CartItem(props) {
   );
 }
 
-export default CartItem;
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    removeFromCart: (id) => dispatch(removeFromCart(id)),
+  };
+};
+export default connect(null, mapDispatchToProps)(CartItem);

@@ -1,26 +1,39 @@
-import React from "react";
+import React,{ useEffect } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
-import { uiActions } from "../Store/ui-slice";
+
 import { Link } from "react-router-dom";
-function CartButton(props) {
-  const dispatch = useDispatch();
-  const cartQuantity = useSelector(state => state.cart.totalQuantity);
-  
-  const toggleCartHandler = () => {
-    dispatch(uiActions.toggle());
-  };
+import { connect } from "react-redux";
+function CartButton({ cart }) {
+
+const [cartCount, setCartCount] = (0);
+
+useEffect(() => {
+  let count = 0;
+  cart.forEach((item) => {
+    count += item.qty;
+  });
+
+  setCartCount(count);
+}, [cart, cartCount]);
+
+
 
   return (
     <Link to="/cart">
-    <button className="btncart" onClick={toggleCartHandler} >
+    <button className="btncart">
       <span className="icon">
         <AiOutlineShopping className="icon-"/>
       </span>
-      <span className="badge">{cartQuantity}</span>
+      <span className="badge">{cartCount}</span>
     </button>
     </Link>
   );
 }
 
-export default CartButton;
+
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+export default connect(mapStateToProps)(CartButton);

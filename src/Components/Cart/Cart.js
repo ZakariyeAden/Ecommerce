@@ -10,7 +10,8 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-function Cart(props) {
+import { connect } from "react-redux";
+function Cart({cart}) {
   const cartItems = useSelector(state => state.cart.items);
   
   return (
@@ -30,20 +31,9 @@ function Cart(props) {
       </TableContainer>
       {cartItems.length > 0 ? (
         <div>
-          {cartItems.map(item => (
-            <CartItem
-              key={item.id}
-              item={{
-                id: item.id,
-                title: item.name,
-                quantity: item.quantity,
-                total: item.totalPrice,
-                price: item.price,
-                image:item.image,
-               
-              }}
-            />
-          ))}
+        {cart.map((item) => (
+          <CartItem key={item.id} item={item} />
+        ))}
         </div>
       ) : (
         <div>
@@ -54,4 +44,10 @@ function Cart(props) {
   );
 }
 
-export default Cart;
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  };
+};
+
+export default connect(mapStateToProps)(Cart);
