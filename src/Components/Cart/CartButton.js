@@ -1,11 +1,11 @@
-import React,{ useEffect } from "react";
+import React,{ useEffect, useState } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 function CartButton({ cart }) {
 
-const [cartCount, setCartCount] = (0);
+const [cartCount, setCartCount] = useState(0);
 
 useEffect(() => {
   let count = 0;
