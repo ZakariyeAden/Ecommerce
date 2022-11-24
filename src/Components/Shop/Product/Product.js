@@ -2,24 +2,29 @@ import React, { Fragment, useContext } from 'react'
 import ProductItems from './ProductItems';
 
 import { Grid } from "@mui/material";
-import { ProductsContext } from '../../Context'
-const Product = () => {
-const value = useContext(ProductsContext);
+
+import { connect } from 'react-redux';
+const Product = ({products}) => {
+
   return (
     <>
      <main>
     <Grid container spacing={4}>
-    {value.productsList && value.productsList.map(product=>{
-        return (
-          <ProductItems product={product} key={product.id} />
-        )
-      })}
+      {products.map((product) => (
+        <ProductItems key={product.id} product={product}/>
+      ))}
       </Grid>
      </main>
     </>
   )
 }
 
-export default Product
+const mapStateToProps = (state) => {
+  return {
+    products: state.shop.products,
+  };
+};
+
+export default connect(mapStateToProps)(Product);
 
 
