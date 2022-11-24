@@ -71,7 +71,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Gray Cap",
     image: GrayCap,
     width:"200",
-    detailWidth:"10",
+  
     description:"Tax included. Shipping calculated at checkout.",
     detailWidth:"250px",
     button:"Add to Cart",
