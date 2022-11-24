@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ProductsContext } from "../../Context";
+import React, { useState, useEffect,  } from "react";
+
 import { Link } from "react-router-dom";
 import { Grid, Button } from "@mui/material";
-import { cartActions } from "../../Store/cart-slice";
-import { useDispatch } from "react-redux";
+
+import { connect } from "react-redux";
+import { addToCart } from "../../Redux/Actions/cart-action";
 import {
   DetailContainer,
   ProductHeading,
@@ -11,47 +12,22 @@ import {
   Btn,
 } from "../../Style/style-components";
 
-const Details = props => {
-  // const history = useHistory(); put useHistory on top
-  const value = useContext(ProductsContext);
-  const [products, setProducts] = useState({});
+const Details = ({ current , addToCart}) => {
 
-  useEffect(() => {
-    console.log("Inside useEffects");
-    const item = value.productDetail;
-    // value.productsList.find((x) => x.id == props.match.params.id);
 
-    setProducts({ ...item });
-    console.log(products);
-  }, []);
-  const { id, title, price, image, description, detailWidth } =
-    value.productDetail;
-  console.log(image);
-
-  const dispatch = useDispatch();
-
-  const addItemToCartHandler = () => {
-    dispatch(
-      cartActions.addItemToCart({
-        id,
-        title,
-        price,
-        image,
-      })
-    );
-  };
+  // Detail Width
   return (
     <DetailContainer>
       <Grid container spacing={3}>
         <Grid md={6} sm={8}>
-          <img src={image} width={detailWidth} />
+          <img src={current.image}  />
         </Grid>
         <Grid md={6} sm={4}>
           <ColumnGap>
-            <h3 className="detail-heading">{title}</h3>
-            <p>{description}</p>
-            <span>{price}</span>
-            <Btn onClick={addItemToCartHandler} variant="outlined">
+            <h3 className="detail-heading">{current.title}</h3>
+            <p>{current.description}</p>
+            <span>{current.price}</span>
+            <Btn onClick={() => addToCart(current.id)} variant="outlined">
               Add to Cart
             </Btn>
           </ColumnGap>
@@ -60,5 +36,16 @@ const Details = props => {
     </DetailContainer>
   );
 };
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  };
+};
 
-export default Details;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Details);
