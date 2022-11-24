@@ -7,12 +7,11 @@ import Shop from "./Pages/Shop";
 import Footer from "./Pages/Footer";
 import Details from "./Shop/Product/Details";
 import { useSelector } from "react-redux";
-import ProductProvider from "./Context";
-import ProductItems from "./Shop/Product/ProductItems";
+
 function App() {
-  const showCart = useSelector(state => state.ui.cartIsVisible)
+
   return (
-    <ProductProvider>
+    <div>
       <Navbar/>
       <Routes>
         <Route path="/"  element={<Home />}/>
@@ -21,7 +20,7 @@ function App() {
         <Route path="/cart"  element={<Cart />}/>
       </Routes>
       <Footer/>
-    </ProductProvider>
+    </div>
   );
 }
 
