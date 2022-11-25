@@ -11,9 +11,7 @@ import {
   Paper,
 } from "@mui/material";
 import { connect } from "react-redux";
-function Cart({cart}) {
-  const cartItems = useSelector(state => state.cart.items);
-  
+function Cart({cart}) { 
   return (
     <div>
       <h4>Your Cart</h4>
@@ -29,7 +27,7 @@ function Cart({cart}) {
           </TableHead>
         </Table>
       </TableContainer>
-      {cartItems.length > 0 ? (
+      {cart.length > 0 ? (
         <div>
         {cart.map((item) => (
           <CartItem key={item.id} item={item} />

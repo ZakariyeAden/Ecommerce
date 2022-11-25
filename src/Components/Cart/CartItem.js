@@ -16,7 +16,6 @@ function CartItem({item , removeFromCart}) {
   return (
     <TableContainer component={Paper}>
       <Table  aria-label="simple table">
-
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <TableCell component="th" scope="row">
