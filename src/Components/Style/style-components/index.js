@@ -88,7 +88,9 @@ export const Btn = styled.button`
   padding: 1rem 4rem;
   color:#fff;
 `;
-
+export const DetailImg = styled.img`
+  width:250px;
+`;
 // Cart Section
 export const CartImage = styled.image`
   width:40px;
