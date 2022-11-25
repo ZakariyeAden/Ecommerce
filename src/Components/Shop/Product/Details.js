@@ -7,12 +7,12 @@ import { connect } from "react-redux";
 import { addToCart } from "../../Redux/Actions/cart-action";
 import {
   DetailContainer,
-  ProductHeading,
   ColumnGap,
   Btn,
+  DetailImg
 } from "../../Style/style-components";
 
-const Details = ({ current , addToCart}) => {
+const Details = ({ current , addToCart }) => {
 
 
   // Detail Width
@@ -20,13 +20,13 @@ const Details = ({ current , addToCart}) => {
     <DetailContainer>
       <Grid container spacing={3}>
         <Grid md={6} sm={8}>
-          <img src={current.image}  />
+          <DetailImg src={current.image}  />
         </Grid>
         <Grid md={6} sm={4}>
           <ColumnGap>
             <h3 className="detail-heading">{current.title}</h3>
             <p>{current.description}</p>
-            <span>{current.price}</span>
+            <span>${current.price}</span>
             <Btn onClick={() => addToCart(current.id)} variant="outlined">
               Add to Cart
             </Btn>
