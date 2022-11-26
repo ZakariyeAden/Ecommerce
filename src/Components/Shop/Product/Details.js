@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import { Grid, Button,InputLabel,Select,FormControl,MenuItem } from "@mui/material";
-
+import swal from "sweetalert";
 import { connect } from "react-redux";
 import { addToCart } from "../../Redux/Actions/cart-action";
 import {
@@ -10,12 +10,24 @@ import {
   ColumnGap,
   Btn,
   DetailImg,
+  
 } from "../../Style/style-components";
 
-import Modal from '../../Icons/Modal'
+// import Modal from '../../Icons/Modal'
 const Details = ({ current, addToCart, }) => {
 
-console.log(current);
+const Modal = () => {
+  swal({
+    title: "Added to cart!",
+    icon: "success",
+    className: "alert_box",
+    title:current.title,
+    text:"Added to Cart",
+    icon: current.image,
+    imageWidth: 400,
+    imageHeight: 200,
+  });
+};
   return (
     <DetailContainer>
       <Grid container spacing={3}>
@@ -27,7 +39,7 @@ console.log(current);
             <h3 className="detail-heading">{current.title}</h3>
             <p>{current.description}</p>
             <span>${current.price}</span>
-            <Btn onClick={() => {addToCart(current.id); Modal();} }  variant="outlined">
+            <Btn onClick={() => {addToCart(current.id); Modal()} }  variant="outlined">
               Add to Cart
             </Btn>
           </ColumnGap>
