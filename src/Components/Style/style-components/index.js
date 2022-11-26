@@ -92,6 +92,6 @@ export const DetailImg = styled.img`
   width:250px;
 `;
 // Cart Section
-export const CartImage = styled.image`
+export const CartImage = styled.img`
   width:40px;
 `;
