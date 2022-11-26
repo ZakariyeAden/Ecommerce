@@ -10,7 +10,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-
+import { CartImage } from "../Style/style-components";
 
 function CartItem({item , removeFromCart}) {
   return (
@@ -19,10 +19,16 @@ function CartItem({item , removeFromCart}) {
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <TableCell component="th" scope="row">
-              <img src={item.image} />
+              <CartImage src={item.image} />
             </TableCell>
             <TableCell align="right">{item.title}</TableCell>
             <TableCell align="right">{item.price}</TableCell>
+            <TableCell align="right">
+            {/* <button onClick={removeItemHandler}>-</button>
+            {quantity}
+              <button onClick={addItemHandler}>+</button> */}
+             
+            </TableCell>
             <TableCell align="right">
             {/* <button onClick={removeItemHandler}>-</button>
             {quantity}
