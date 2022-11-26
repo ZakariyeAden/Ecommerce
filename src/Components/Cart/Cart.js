@@ -10,6 +10,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+
 import { connect } from "react-redux";
 function Cart({cart}) { 
   return (
@@ -23,6 +24,7 @@ function Cart({cart}) {
               <TableCell align="right">Title</TableCell>
               <TableCell align="right">Price</TableCell>
               <TableCell align="right">Quantity</TableCell>
+              <TableCell align="right">Remove</TableCell>
             </TableRow>
           </TableHead>
         </Table>
