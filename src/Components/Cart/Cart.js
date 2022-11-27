@@ -24,6 +24,7 @@ function Cart({cart}) {
               <TableCell align="right">Title</TableCell>
               <TableCell align="right">Price</TableCell>
               <TableCell align="right">Quantity</TableCell>
+              <TableCell align="right">Total</TableCell>
               <TableCell align="right">Remove</TableCell>
             </TableRow>
           </TableHead>
