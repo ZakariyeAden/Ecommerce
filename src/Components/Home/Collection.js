@@ -9,14 +9,14 @@ function Collection(props) {
       <SectionContainer>
         <SecondaryHeading>{props.title}</SecondaryHeading>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item lg={6}>
             <Link to="/shop" className="collection">
               <Image src={BlackThobe} />
             </Link>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item lg={6}>
             <Link to="/shop" className="collection">
-              <Image2 src={Abaya} className="img" />
+              <Image2 src={Abaya}  />
             </Link>
           </Grid>
         </Grid>
