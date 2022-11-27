@@ -26,9 +26,9 @@ const ProductItems = ({product, addToCart, loadCurrentItem}) => {
             <Column>
               <ProductHeading>{product.title}</ProductHeading>
               <span className="price">${product.price}</span>
-              <Btn onClick={() => addToCart(product.id)} className="btn">
+              {/* <Btn onClick={() => addToCart(product.id)} className="btn">
                 Add to Cart
-              </Btn>
+              </Btn> */}
             </Column>
           </div>
         </Grid>
