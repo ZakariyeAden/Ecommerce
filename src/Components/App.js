@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { useLayoutEffect } from "react";
 import Navbar from "./Navbar/Navbar";
 import { Routes,Route } from 'react-router-dom'
 import Home from "./Pages/Home";
@@ -6,10 +6,18 @@ import Cart from "./Cart/Cart";
 import Shop from "./Pages/Shop";
 import Footer from "./Pages/Footer";
 import Details from "./Shop/Product/Details";
-import { useSelector } from "react-redux";
+
 
 function App() {
 
+  useLayoutEffect(() => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("loaded");
+    setTimeout (() => {
+      document.body.removeChild(loader);
+    }, 2000); //Anitmation duration
+  },[]);
+  
   return (
     <div>
       <Navbar/>
