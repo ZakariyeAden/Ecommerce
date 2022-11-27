@@ -30,12 +30,6 @@ const shopReducer = (state = INITIAL_STATE, action) => {
           : [...state.cart, { ...item, qty: 1 } ],
           
       };
-      case actionTypes.CART_BUTTON:
-        const index = state.cart.findIndex((item) => item.key === action.payload.key);
-        return {
-          ...state,
-          cart: index == -1 ? [...state.cart, action.payload] : [...state.cart],
-        };
     case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,
