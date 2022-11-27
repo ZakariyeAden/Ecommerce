@@ -26,6 +26,7 @@ const Modal = () => {
     icon: current.image,
     imageWidth: 400,
     imageHeight: 200,
+    timer: 1500
   });
 };
   return (
