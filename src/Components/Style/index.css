@@ -72,6 +72,12 @@ h3 {
   margin-inline-end: 0px;
   font-weight: bold;
 }
-.cart-width{
-  width: 40px;
+.trash{
+  width: 20px;
+  height: 20px;
+  color: #f87171;
+}
+.trash-btn{
+  border: none;
+  background:none;
 }
