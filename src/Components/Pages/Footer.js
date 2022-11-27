@@ -7,26 +7,32 @@ function Footer() {
   return (
     <SectionContainer>
     <hr className="bg-color"/>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <div>
+      <Grid container spacing={4}>
+          <div className="mt-2">
             <FooterHeading>Shortcuts</FooterHeading>
             <Box display="flex">
+            <Grid xs={3}>
               <Link to="" className="link footer-link">
                 Search
               </Link>
+              </Grid>
+              <Grid xs={3}>
               <Link to="" className="link footer-link">
                 Privacy policy
               </Link>
+              </Grid>
+              <Grid xs={3}>
               <Link to="" className="link footer-link">
                 Refund Policy
               </Link>
+              </Grid>
+              <Grid xs={3}>
               <Link to="" className="link footer-link">
                 Terms of Service
               </Link>
+              </Grid>
             </Box>
           </div>
-        </Grid>
       </Grid>
       <Box display="flex" className="mt-2 company">© 2022, all rights Reserved</Box>
     </SectionContainer>
