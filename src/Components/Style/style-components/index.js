@@ -6,7 +6,21 @@ export const MainHeading = styled.h1`
   color: #fff;
   font-style: bold;
   font-weight: 700;
+
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 375px) {
+   font-size: 1rem;
+  }
 `;
+
 export const Container = styled.section`
   max-width: 1440px;
 `;
@@ -18,6 +32,10 @@ export const Button = styled.button`
   background-color: #3a3a3a;
   padding: 1rem 2rem;
   color: #fff;
+  @media (max-width: 425px) {
+    padding: 1rem 1.5rem;
+  }
+
 `;
 export const SectionContainer = styled.div`
   padding: 7rem 4rem;
@@ -30,7 +48,13 @@ export const DetailContainer = styled.div`
 `;
 
 export const Image2 = styled.img`
-  width: 98%;
+  width: 96%;
+  @media (max-width: 1024px) {
+    width: 122%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 // Shop Section
@@ -41,6 +65,10 @@ export const ShopHeading = styled.h2`
   font-style: bold;
   font-weight: 700;
   text-align: center;
+
+  @media (max-width: 425px) {
+   font-size:1.5rem;
+  }
 `;
 // Product Section
 
@@ -55,15 +83,30 @@ export const SecondaryHeading = styled.h3`
   letter-spacing: 0.25rem;
   color: #3a3a3a;
   text-align: center;
+  margin-bottom: 1rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `;
 export const Image = styled.img`
   width: 98%;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 export const Description = styled.p`
   text-align: center;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 100;
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 375px) {
+   font-size: 0.6rem;
+  }
 `;
 export const FooterHeading = styled.h5`
   font-size: 1.3rem;
@@ -87,6 +130,10 @@ export const Btn = styled.button`
   background-color: #3a3a3a;
   padding: 1rem 4rem;
   color: #fff;
+
+  @media (max-width: 375px) {
+    padding: 1rem 3rem;
+  }
 `;
 export const DetailImg = styled.img`
   width: 250px;
@@ -95,4 +142,3 @@ export const DetailImg = styled.img`
 export const CartImage = styled.img`
   width: 40px;
 `;
-
