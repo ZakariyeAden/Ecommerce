@@ -11,7 +11,7 @@ import {
   Paper,
 } from "@mui/material";
 import { CartImage } from "../Style/style-components";
-
+import Trash from "../Icons/Trash";
 function CartItem({item , removeFromCart}) {
   return (
     <TableContainer component={Paper}>
@@ -33,7 +33,7 @@ function CartItem({item , removeFromCart}) {
             {/* <button onClick={removeItemHandler}>-</button>
             {quantity}
               <button onClick={addItemHandler}>+</button> */}
-              <button onClick={() => removeFromCart(item.id)}>Remove</button>
+              <button onClick={() => removeFromCart(item.id)} className="trash-btn"><Trash/></button>
             </TableCell>
   
           </TableRow>
