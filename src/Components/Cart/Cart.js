@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 
 import { connect } from "react-redux";
-function Cart({cart}) { 
+function Cart({ cart }) {
   return (
     <div>
       <h4>Your Cart</h4>
@@ -32,9 +32,9 @@ function Cart({cart}) {
       </TableContainer>
       {cart.length > 0 ? (
         <div>
-        {cart.map((item) => (
-          <CartItem key={item.id} item={item} />
-        ))}
+          {cart.map(item => (
+            <CartItem key={item.id} item={item} />
+          ))}
         </div>
       ) : (
         <div>
@@ -45,7 +45,7 @@ function Cart({cart}) {
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     cart: state.shop.cart,
   };

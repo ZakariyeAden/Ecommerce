@@ -1,5 +1,5 @@
-import React,{ useState, useEffect} from "react";
-import { connect,  } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import { removeFromCart, adjustItemQty } from "../Redux/Actions/cart-action";
 import {
   Table,
@@ -21,7 +21,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
     let items = 0;
     let price = 0;
 
-    cart.forEach((item) => {
+    cart.forEach(item => {
       items += item.qty;
       price += item.qty * item.price;
     });
@@ -56,7 +56,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
               />
             </TableCell>
             <TableCell align="right">
-            <span>${totalPrice}</span>
+              <span>${totalPrice}</span>
             </TableCell>
             <TableCell align="right">
               <button
@@ -73,8 +73,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
   );
 }
 
-
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     cart: state.shop.cart,
   };

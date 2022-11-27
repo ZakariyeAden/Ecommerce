@@ -10,7 +10,7 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      // Great Item data from products array
+      // Get Item data from products array
       const item = state.products.find(
         product => product.id === action.payload.id
       );
@@ -27,13 +27,21 @@ const shopReducer = (state = INITIAL_STATE, action) => {
                 ? { ...item, qty: item.qty + 1 }
                 : item
             )
-          : [...state.cart, { ...item, qty: 1 }],
+          : [...state.cart, { ...item, qty: 1 } ],
+          
       };
+      case actionTypes.CART_BUTTON:
+        const index = state.cart.findIndex((item) => item.key === action.payload.key);
+        return {
+          ...state,
+          cart: index == -1 ? [...state.cart, action.payload] : [...state.cart],
+        };
     case actionTypes.REMOVE_FROM_CART:
       return {
         ...state,
         cart: state.cart.filter(item => item.id !== action.payload.id),
       };
+      
     case actionTypes.ADJUST_ITEM_QTY:
       return {
         ...state,
