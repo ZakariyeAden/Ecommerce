@@ -13,8 +13,9 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Gold Thobe",
     image: GoldThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    detailWidth:"250px",
+    size:[{option:"S",option:"M", option:"L"}],
     button:"Add to Cart",
+
   },
   {
     id: 1,
@@ -22,7 +23,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "White Thobe",
     image: WhiteThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    detailWidth:"250px",
+    size:[{option:"S",option:"M", option:"L"}],
     button:"Add to Cart",
   },
   {
@@ -31,7 +32,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Brown Thobe",
     image: BrownThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    detailWidth:"250px",
+    size:[{option:"S",option:"M", option:"L"}],
     button:"Add to Cart",
   },
   {
@@ -41,7 +42,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     image: AbayaCream,
     width:"200", 
     description:"Tax included. Shipping calculated at checkout.", 
-    detailWidth:"250px",  
+    size:[{option:"S",option:"M", option:"L"}], 
     button:"Add to Cart",
   },
   {
@@ -50,9 +51,8 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Green Abaya",
     image: GreenAbaya,
     description:"Tax included. Shipping calculated at checkout.",
-    detailWidth:"250px",
+    size:[{option:"S",option:"M", option:"L"}],
     width:"200",
-   
     button:"Add to Cart",
   },
   {
@@ -62,7 +62,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     image: BlackCap,
     width:"200",
     description:"Tax included. Shipping calculated at checkout.",
-    detailWidth:"250px",
+    size:[{option:"S",option:"M", option:"L"}],
     button:"Add to Cart",
   },
   {
@@ -71,7 +71,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Gray Cap",
     image: GrayCap,
     width:"200",
-  
+    size:[{option:"S",option:"M", option:"L"}],
     description:"Tax included. Shipping calculated at checkout.",
     detailWidth:"250px",
     button:"Add to Cart",
