@@ -19,8 +19,15 @@ import {
   DetailImg,
 } from "../../Style/style-components";
 
-const Details = ({ current, addToCart }) => {
+const Details = ({ current, addToCart  }) => {
  
+ const [currentSelection, setCurrentSelection ] = ('');
+
+ const menuSelect = (e) => {
+   setCurrentSelection(e.target.value);
+  //  sizeSelection(e.target.value);
+   
+ };
 
   const Modal = () => {
     swal({
@@ -52,28 +59,20 @@ const Details = ({ current, addToCart }) => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={current.size}
+                value={currentSelection}
                 label="Size"
-                onch
+                onChange={menuSelect}
               >
-                <MenuItem value={current.size}>{current.size[0]}</MenuItem>
-                <MenuItem value={current.size}>{current.size[1]}</MenuItem>
-                <MenuItem value={current.size}>{current.size[2]}</MenuItem>
+                <MenuItem value='S'>{current.size[0]}</MenuItem>
+                <MenuItem value='M'>{current.size[1]}</MenuItem>
+                <MenuItem value='L'>{current.size[2]}</MenuItem>
               </Select>
             </FormControl>
-            {/* {index > -1 ? (
-              <Btn onClick={() => {addToCart(current.id); Modal()} }  variant="outlined">
-              Add to Cart
-            </Btn>
-            ) : (
-              <Btn onClick={() => {addToCart(current.id); Modal()} }  variant="outlined">
-              Add to Cart
-              <Basket/>
-            </Btn>
-            )} */}
+         
             <Btn
               onClick={() => {
-                addToCart(current.id);
+                addToCart(current.id, current.size);
+                
                 Modal();
               }}
               variant="outlined"
@@ -86,9 +85,12 @@ const Details = ({ current, addToCart }) => {
     </DetailContainer>
   );
 };
+
+
 const mapStateToProps = state => {
   return {
     current: state.shop.currentItem,
+    cart: state.shop.cart,
   };
 };
 
