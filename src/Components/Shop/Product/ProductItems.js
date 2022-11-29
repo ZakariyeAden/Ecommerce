@@ -16,22 +16,21 @@ const ProductItems = ({product, addToCart, loadCurrentItem}) => {
   return (
     <>
       <SectionContainer>
-        <Grid item>
           <div onClick={() => loadCurrentItem(product)}>
             <Link to={`/details${product.id}`}>
+        <Grid item lg={6}>
               <div className="wrapper">
                 <img src={product.image}  />
               </div>
+        </Grid>
             </Link>
+        <Grid item lg={6}>
             <Column>
               <ProductHeading>{product.title}</ProductHeading>
               <span className="price">${product.price}</span>
-              {/* <Btn onClick={() => addToCart(product.id)} className="btn">
-                Add to Cart
-              </Btn> */}
             </Column>
-          </div>
         </Grid>
+          </div>
       </SectionContainer>
     </>
   );
