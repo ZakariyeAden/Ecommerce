@@ -9,7 +9,7 @@ const Product = ({products}) => {
   return (
     <>
      <main>
-    <Grid container spacing={4}>
+    <Grid container spacing={2}>
       {products.map((product) => (
         <ProductItems key={product.id} product={product}/>
       ))}
