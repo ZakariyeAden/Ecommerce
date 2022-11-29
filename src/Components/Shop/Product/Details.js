@@ -58,11 +58,10 @@ const Details = ({ current, addToCart }) => {
                 id="demo-simple-select"
                 value={current.size}
                 label="Age"
-                onChange={current.size}
               >
-                <MenuItem value={current.size}>S</MenuItem>
-                <MenuItem value={current.size}>M</MenuItem>
-                <MenuItem value={current.size}>L</MenuItem>
+                <MenuItem value={current.size}>{current.size}</MenuItem>
+                <MenuItem value={current.size}></MenuItem>
+                <MenuItem value={current.size}></MenuItem>
               </Select>
             </FormControl>
             {/* {index > -1 ? (
