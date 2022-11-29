@@ -13,7 +13,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Gold Thobe",
     image: GoldThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
 
   },
@@ -23,7 +23,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "White Thobe",
     image: WhiteThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
   },
   {
@@ -32,7 +32,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Brown Thobe",
     image: BrownThobe,
     description:"Tax included. Shipping calculated at checkout.",
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
   },
   {
@@ -41,7 +41,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Abaya Cream",
     image: AbayaCream,
     description:"Tax included. Shipping calculated at checkout.", 
-    size:[{option:"S",option:"M", option:"L"}], 
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
   },
   {
@@ -50,7 +50,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Green Abaya",
     image: GreenAbaya,
     description:"Tax included. Shipping calculated at checkout.",
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
   },
   {
@@ -59,7 +59,7 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     title: "Black Cap",
     image: BlackCap,
     description:"Tax included. Shipping calculated at checkout.",
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     button:"Add to Cart",
   },
   {
@@ -67,10 +67,10 @@ import GreenAbaya from '../Assets/Abaya/GreenAbaya.png'
     price: 8.99,
     title: "Gray Cap",
     image: GrayCap,
-    size:[{option:"S",option:"M", option:"L"}],
+    size:[ "S" , "M", "L"],
     description:"Tax included. Shipping calculated at checkout.",
     button:"Add to Cart",
   },
 ];
-
+console.log(products);
 export default products;
