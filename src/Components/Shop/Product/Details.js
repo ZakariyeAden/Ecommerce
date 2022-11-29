@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import {
@@ -10,7 +10,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import swal from "sweetalert";
-import { connect, useSelector,useDispatch } from "react-redux";
+import { connect, useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../Redux/Actions/cart-action";
 import {
   DetailContainer,
@@ -18,20 +18,12 @@ import {
   Btn,
   DetailImg,
 } from "../../Style/style-components";
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+
 const Details = ({ current, addToCart }) => {
-
-  const dispatch = useDispatch();
-  const [size, setSize] = useState("");
-
-
-
-
-
   // ***** Error in Cart ****  //
   // const cart = useSelector(state => state.cart);
   // const index = cart.find((item) => item.id === current.id);
-  
+
   // console.log(cart);
 
   const Modal = () => {
@@ -50,27 +42,27 @@ const Details = ({ current, addToCart }) => {
 
   return (
     <DetailContainer>
-      <Grid container spacing={3}>
-        <Grid md={6} sm={8}>
+      <Grid container spacing={2}>
+        <Grid lg={6}>
           <DetailImg src={current.image} />
         </Grid>
-        <Grid md={6} sm={4}>
+        <Grid lg={6}>
           <ColumnGap>
-            <FormControl fullWidth>
             <h3 className="detail-heading">{current.title}</h3>
             <p>{current.description}</p>
             <span>${current.price}</span>
-              <InputLabel id="select-label">Size</InputLabel>
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Size</InputLabel>
               <Select
-                labelId="select-label"
-                id="select"
-                value="Size"
-                label="Size"
-                
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={current.size}
+                label="Age"
+                onChange={current.size}
               >
-                <MenuItem value="S">Small</MenuItem>
-                <MenuItem value="M">Medium</MenuItem>
-                <MenuItem value="L">Large</MenuItem>
+                <MenuItem value={current.size}>S</MenuItem>
+                <MenuItem value={current.size}>M</MenuItem>
+                <MenuItem value={current.size}>L</MenuItem>
               </Select>
             </FormControl>
             {/* {index > -1 ? (
