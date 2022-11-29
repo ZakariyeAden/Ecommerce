@@ -44,6 +44,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
             </TableCell>
             <TableCell align="right">{item.title}</TableCell>
             <TableCell align="right">{item.price}</TableCell>
+            <TableCell align="right">{item.size}</TableCell>
             <TableCell align="right">
               <label htmlFor="qty">Qty</label>
               <input
