@@ -20,11 +20,7 @@ import {
 } from "../../Style/style-components";
 
 const Details = ({ current, addToCart }) => {
-  // ***** Error in Cart ****  //
-  // const cart = useSelector(state => state.cart);
-  // const index = cart.find((item) => item.id === current.id);
-
-  // console.log(cart);
+ 
 
   const Modal = () => {
     swal({
@@ -57,11 +53,12 @@ const Details = ({ current, addToCart }) => {
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={current.size}
-                label="Age"
+                label="Size"
+                onch
               >
-                <MenuItem value={current.size}>{current.size}</MenuItem>
-                <MenuItem value={current.size}></MenuItem>
-                <MenuItem value={current.size}></MenuItem>
+                <MenuItem value={current.size}>{current.size[0]}</MenuItem>
+                <MenuItem value={current.size}>{current.size[1]}</MenuItem>
+                <MenuItem value={current.size}>{current.size[2]}</MenuItem>
               </Select>
             </FormControl>
             {/* {index > -1 ? (
