@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 function Cart({ cart }) {
   return (
     <div>
@@ -23,6 +24,7 @@ function Cart({ cart }) {
               <TableCell>Image</TableCell>
               <TableCell align="right">Title</TableCell>
               <TableCell align="right">Price</TableCell>
+              <TableCell align="right">Size</TableCell>
               <TableCell align="right">Quantity</TableCell>
               <TableCell align="right">Total</TableCell>
               <TableCell align="right">Remove</TableCell>
@@ -39,6 +41,7 @@ function Cart({ cart }) {
       ) : (
         <div>
           <h4 className="cart-heading">Cart is Empty</h4>
+          <Link to="/shop" className="link">Continue Shopping</Link>
         </div>
       )}
     </div>
