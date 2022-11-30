@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+
 import React from "react";
 import CartItem from "./CartItem";
 import {
@@ -11,6 +11,7 @@ import {
   Paper,
 } from "@mui/material";
 
+import Back from "../Icons/Back";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 function Cart({ cart }) {
@@ -41,7 +42,7 @@ function Cart({ cart }) {
       ) : (
         <div>
           <h4 className="cart-heading">Cart is Empty</h4>
-          <Link to="/shop" className="link">Continue Shopping</Link>
+          <Link to="/shop" className="cart-link"><Back />Continue Shopping</Link>
         </div>
       )}
     </div>
