@@ -19,15 +19,14 @@ import {
   DetailImg,
 } from "../../Style/style-components";
 
-const Details = ({ current, addToCart  }) => {
+const Details = ({ current, addToCart,   }) => {
  
- const [currentSelection, setCurrentSelection ] = ('');
+//  const [currentSelection, setCurrentSelection ] = ('');
 
- const menuSelect = (e) => {
-   setCurrentSelection(e.target.value);
-  //  sizeSelection(e.target.value);
-   
- };
+//  const menuSelect = (e) => {
+//    setCurrentSelection(e.target.value);
+//   //  sizeSelection(e.target.value);
+//  };
 
   const Modal = () => {
     swal({
@@ -46,15 +45,15 @@ const Details = ({ current, addToCart  }) => {
   return (
     <DetailContainer>
       <Grid container spacing={2}>
-        <Grid lg={6}>
+        <Grid lg={6} md={6} >
           <DetailImg src={current.image} />
         </Grid>
-        <Grid lg={6}>
+        <Grid lg={6} md={6} >
           <ColumnGap>
             <h3 className="detail-heading">{current.title}</h3>
             <p>{current.description}</p>
             <span>${current.price}</span>
-            <FormControl fullWidth>
+            {/* <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Size</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
@@ -67,11 +66,11 @@ const Details = ({ current, addToCart  }) => {
                 <MenuItem value='M'>{current.size[1]}</MenuItem>
                 <MenuItem value='L'>{current.size[2]}</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
          
             <Btn
               onClick={() => {
-                addToCart(current.id, current.size);
+                addToCart(current.id, );
                 
                 Modal();
               }}
