@@ -12,20 +12,23 @@ import {
 } from "@mui/material";
 import { CartImage } from "../Style/style-components";
 import Trash from "../Icons/Trash";
-function CartItem({ item, removeFromCart, adjustQty, cart }) {
+import Modal from '../Icons/Modal'
+function CartItem({ item, removeFromCart, adjustQty, cart,   }) {
   const [input, setInput] = useState(item.qty);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
-
+ 
   useEffect(() => {
     let items = 0;
     let price = 0;
+    
 
     cart.forEach(item => {
       items += item.qty;
       price += item.qty * item.price;
+      
     });
-
+  
     setTotalItems(items);
     setTotalPrice(price);
   }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
@@ -34,6 +37,10 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
     setInput(e.target.value);
     adjustQty(item.id, e.target.value);
   };
+  
+
+  
+ 
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">
@@ -44,7 +51,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
             </TableCell>
             <TableCell align="right">{item.title}</TableCell>
             <TableCell align="right">{item.price}</TableCell>
-            <TableCell align="right">{item.size}</TableCell>
+            {/* <TableCell align="right">{item.size}</TableCell> */}
             <TableCell align="right">
               <label htmlFor="qty">Qty</label>
               <input
@@ -61,7 +68,7 @@ function CartItem({ item, removeFromCart, adjustQty, cart }) {
             </TableCell>
             <TableCell align="right">
               <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => {removeFromCart(item.id) }}
                 className="trash-btn"
               >
                 <Trash />
