@@ -55,6 +55,12 @@ export const Image2 = styled.img`
   @media (max-width: 425px) {
     width: 100%;
   }
+  @media (max-width: 768px) {
+    width: 98%;
+  }
+  @media (max-width: 820px) {
+    width: 98%;
+  }
 `;
 
 // Shop Section
@@ -93,8 +99,9 @@ export const Image = styled.img`
   width: 98%;
 
   @media (max-width: 425px) {
-    width: 100%;
+    width: 98%;
   }
+  
 `;
 export const Description = styled.p`
   text-align: center;
@@ -132,7 +139,12 @@ export const Btn = styled.button`
   color: #fff;
 
   @media (max-width: 375px) {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
+  @media (max-width: 320px) {
     padding: 1rem 3rem;
+    font-size: 0.8rem;
   }
 `;
 export const DetailImg = styled.img`
@@ -141,4 +153,9 @@ export const DetailImg = styled.img`
 // Cart Section
 export const CartImage = styled.img`
   width: 40px;
+`;
+export const CartHeading = styled.h4`
+  font-size:2rem;
+  text-align:center;
+  color:#3a3a3a;
 `;
