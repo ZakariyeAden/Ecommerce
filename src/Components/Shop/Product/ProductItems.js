@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useLayoutEffect } from "react";
 import {
   SectionContainer,
   ProductHeading,
@@ -11,38 +11,35 @@ import { Link } from "react-router-dom";
 
 import { loadCurrentItem, addToCart } from "../../Redux/Actions/cart-action";
 import { connect } from "react-redux";
-const ProductItems = ({product, addToCart, loadCurrentItem}) => {
-
+const ProductItems = ({ product, addToCart, loadCurrentItem }) => {
   return (
     <>
       <SectionContainer>
-          <div onClick={() => loadCurrentItem(product)}>
-            <Link to={`/details${product.id}`}>
-        <Grid item lg={6}>
+        <div onClick={() => loadCurrentItem(product)}>
+          <Link to={`/details${product.id}`}>
+            <Grid item lg={6}>
               <div className="wrapper">
-                <img src={product.image}  />
+                <img src={product.image} />
               </div>
-        </Grid>
-            </Link>
-        <Grid item lg={6}>
+            </Grid>
+          </Link>
+          <Grid item lg={6}>
             <Column>
               <ProductHeading>{product.title}</ProductHeading>
               <span className="price">${product.price}</span>
             </Column>
-        </Grid>
-          </div>
+          </Grid>
+        </div>
       </SectionContainer>
     </>
   );
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    addToCart: (id) => dispatch(addToCart(id)),
-    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
+    addToCart: id => dispatch(addToCart(id)),
+    loadCurrentItem: item => dispatch(loadCurrentItem(item)),
   };
 };
 
 export default connect(null, mapDispatchToProps)(ProductItems);
-
-
