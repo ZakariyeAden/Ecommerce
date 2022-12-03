@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
-import Logo from '../Assets/LOGO.png'
-import '../Style/Navbar.css'
+import { Link } from "react-router-dom";
+import Logo from "../Assets/LOGO.png";
+import "../Style/Navbar.css";
 import CartButton from "../Cart/CartButton";
+import NavLinks from "./NavLinks";
+import MobileLinks from "./MobileLinks";
 
 const DisplayFlex = styled.nav`
   display: flex;
@@ -18,17 +20,30 @@ const SpaceBtwn = styled.ul`
   list-style: none;
   gap: 2rem;
   text-decoration: none;
+
+  @media (max-width: 425px) {
+  flex-direction:column;
+}
 `;
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
   return (
     <header>
       <DisplayFlex>
-        <Link to="/"><img src={Logo} width="50"/></Link>
+        <div className="menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className={isMenuOpen ? "bar1-active" : "bar1"} />
+          <div className={isMenuOpen ? "bar2-active" : "bar2"} />
+        </div>
+        <Link to="/">
+          <img src={Logo} width="50" className="logo" />
+        </Link>
         <SpaceBtwn>
-          <Link to="/" className="link">Home</Link>
-          <Link to="/shop" className="link">Shop</Link>
+          <NavLinks/>
+          { isMenuOpen && <MobileLinks/> }
         </SpaceBtwn>
-        <CartButton/>
+        <CartButton />
       </DisplayFlex>
     </header>
   );
