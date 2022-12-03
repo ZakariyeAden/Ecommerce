@@ -15,7 +15,7 @@ function App() {
     loader.classList.add("loaded");
     setTimeout (() => {
       document.body.removeChild(loader);
-    }, 2000); //Anitmation duration
+    }, 120000); //Anitmation duration
   },[]);
   
   return (
