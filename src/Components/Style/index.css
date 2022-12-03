@@ -29,6 +29,7 @@ body{
   border: none;
   cursor: pointer;
   background-color: #fff;
+  margin-bottom: 1rem;
 }
 .cart-link{
   align-items: center;
@@ -45,6 +46,7 @@ body{
   background-color: red;
   color: #000;
 }
+
 /* *************************** */
 /* Headings         ************/
 /* *************************** */
