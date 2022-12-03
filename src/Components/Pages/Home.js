@@ -18,9 +18,9 @@ function Home() {
     <Container>
       <div className="bg-img">
         <div className="text-box">
-          <MainHeading>New Thobes Drops Avalabile Now</MainHeading>
+          <MainHeading className="animate__animated animate__fadeInDownBig">New Thobes Drops Avalabile Now</MainHeading>
           <Link to="/shop">
-            <Button className="btn">Shop Now</Button>
+            <Button className="btn animate__animated animate__fadeInUp">Shop Now</Button>
           </Link>
         </div>
       </div>
