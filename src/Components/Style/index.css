@@ -110,3 +110,10 @@ h3 {
     width: 23px;
     margin-left: 1rem;
 }
+
+/* ***************** */
+/* Contact ********* */
+/* ***************** */
+.contact-bg {
+  background-image: url("../Assets/Thobes/WhiteThobeContact.jpg");
+}

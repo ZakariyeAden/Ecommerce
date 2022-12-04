@@ -15,8 +15,10 @@
 /* **************** */
 /* Images */
 /* **************** */
-.bg-img {
+.bg{
   background-image: url("../Assets/Thobes/ThobeImg.jpg");
+}
+.bg-img {
   background-position: center;
   background-size: cover;
   height: 90vh;

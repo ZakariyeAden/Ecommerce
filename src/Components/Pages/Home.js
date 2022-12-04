@@ -16,7 +16,7 @@ import About from "../Home/About";
 function Home() {
   return (
     <Container>
-      <div className="bg-img">
+      <div className="bg-img bg">
         <div className="text-box">
           <MainHeading className="animate__animated animate__fadeInDownBig">New Thobes Drops Avalabile Now</MainHeading>
           <Link to="/shop">

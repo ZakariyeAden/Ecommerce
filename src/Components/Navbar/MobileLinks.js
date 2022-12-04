@@ -10,6 +10,9 @@ function MobileLinks() {
         <Link to="/shop" className="link">
           Shop
         </Link>
+        <Link to="/contact" className="link">
+          Contact
+        </Link>
       </ul>
     </div>
   );

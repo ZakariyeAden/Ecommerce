@@ -4,7 +4,7 @@ import { ShopHeading } from '../Style/style-components/index'
 function Shop() {
   return (
     <Fragment>
-    <div className="bg-img">
+    <div className="bg-img bg">
     <div className="text-box">
     <ShopHeading>Our Thobes and Abayas</ShopHeading>
     </div>
