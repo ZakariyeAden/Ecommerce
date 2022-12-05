@@ -1,5 +1,8 @@
 import styled from "styled-components";
+
+// ****************************//
 // Home Section
+// ****************************//
 export const MainHeading = styled.h1`
   font-size: 3.5rem;
   letter-spacing: 0.2em;
@@ -62,8 +65,9 @@ export const Image2 = styled.img`
     width: 98%;
   }
 `;
-
+// ****************************//
 // Shop Section
+// ****************************//
 export const ShopHeading = styled.h2`
   font-size: 3rem;
   letter-spacing: 0.2em;
@@ -76,14 +80,20 @@ export const ShopHeading = styled.h2`
    font-size:1.5rem;
   }
 `;
-// Product Section
 
+
+// ****************************//
+// Product Section
+// ****************************//
 export const ProductHeading = styled.h4`
   font-size: 1.3rem;
   letter-spacing: 0.2em;
   color: #3a3a3a;
 `;
+
+// ****************************//
 // Reuseable
+// ****************************//
 export const SecondaryHeading = styled.h3`
   font-size: 2rem;
   letter-spacing: 0.25rem;
@@ -150,7 +160,9 @@ export const Btn = styled.button`
 export const DetailImg = styled.img`
   width: 250px;
 `;
+// ****************************//
 // Cart Section
+// ****************************//
 export const CartImage = styled.img`
   width: 40px;
 `;
