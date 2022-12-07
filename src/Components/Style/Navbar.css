@@ -4,8 +4,9 @@
   font-size: 1rem;
   display: inline-block;
   padding: 15px 20px;
-  position: relative;
   letter-spacing: 0.15em;
+}
+.link- {
   position: relative;
 }
 .cart-link {
@@ -132,7 +133,7 @@
     overflow: hidden;
     transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .logo{
+  .logo {
     margin-left: 5rem;
   }
 }
@@ -143,8 +144,8 @@
 }
 @media (max-width: 390px) {
   .menu-links {
-      right: 20rem;
-      width: 101vw;
+    right: 20rem;
+    width: 101vw;
   }
 }
 @media (max-width: 375px) {
@@ -157,17 +158,17 @@
     top: 6.4rem;
     right: 18rem;
     width: 110vw;
-}
+  }
 }
 @media (max-width: 320px) {
   .menu-links {
     top: 6.4rem;
     right: 17rem;
     width: 112vw;
-}
+  }
 }
 @media (max-width: 280px) {
   .menu-links {
     width: 119vw;
-}
+  }
 }
