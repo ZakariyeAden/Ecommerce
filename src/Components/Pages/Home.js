@@ -6,7 +6,7 @@ import {
   Button,
 } from "../Style/style-components";
 import { Link } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid,  } from "@mui/material";
 
 import Cap from "../Assets/Caps/BlackCap.png";
 import Thobe from "../Assets/Thobes/Aqua.png";
