@@ -20,7 +20,7 @@ export const MainHeading = styled.h1`
     font-size: 1.3rem;
   }
   @media (max-width: 375px) {
-   font-size: 1rem;
+    font-size: 1rem;
   }
 `;
 
@@ -38,7 +38,6 @@ export const Button = styled.button`
   @media (max-width: 425px) {
     padding: 1rem 1.5rem;
   }
-
 `;
 export const SectionContainer = styled.div`
   padding: 7rem 4rem;
@@ -77,10 +76,9 @@ export const ShopHeading = styled.h2`
   text-align: center;
 
   @media (max-width: 425px) {
-   font-size:1.5rem;
+    font-size: 1.5rem;
   }
 `;
-
 
 // ****************************//
 // Product Section
@@ -105,13 +103,13 @@ export const SecondaryHeading = styled.h3`
     font-size: 1.5rem;
   }
 `;
+
 export const Image = styled.img`
   width: 98%;
 
   @media (max-width: 425px) {
     width: 98%;
   }
-  
 `;
 export const Description = styled.p`
   text-align: center;
@@ -122,13 +120,20 @@ export const Description = styled.p`
     font-size: 0.8rem;
   }
   @media (max-width: 375px) {
-   font-size: 0.6rem;
+    font-size: 0.6rem;
   }
 `;
 export const FooterHeading = styled.h5`
   font-size: 1.3rem;
   font-weight: 400;
   font-style: normal;
+`;
+export const ContactHeading = styled.h3`
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 2rem;
 `;
 export const Column = styled.div`
   display: flex;
@@ -167,7 +172,15 @@ export const CartImage = styled.img`
   width: 40px;
 `;
 export const CartHeading = styled.h4`
-  font-size:2rem;
-  text-align:center;
-  color:#3a3a3a;
+  font-size: 2rem;
+  text-align: center;
+  color: #3a3a3a;
+`;
+
+// ****************************//
+// Form Section
+// ****************************//
+export const FormSection = styled.section`
+  background: linear-gradient(#141e30, #243b55) no-repeat;
+  height: 100vh;
 `;
