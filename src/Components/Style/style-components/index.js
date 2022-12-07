@@ -181,6 +181,5 @@ export const CartHeading = styled.h4`
 // Form Section
 // ****************************//
 export const FormSection = styled.section`
-  background: linear-gradient(#141e30, #243b55) no-repeat;
   height: 100vh;
 `;
