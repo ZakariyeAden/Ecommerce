@@ -51,6 +51,7 @@ const Details = ({ current, addToCart,cart   }) => {
             <h3 className="detail-heading">{current.title}</h3>
             <p>{current.description}</p>
             <span>${current.price}</span>
+         
             {/* <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Size</InputLabel>
               <Select
@@ -65,7 +66,6 @@ const Details = ({ current, addToCart,cart   }) => {
                 <MenuItem value='L'>{current.size[2]}</MenuItem>
               </Select>
             </FormControl> */}
-         
             {cart.some((p) => p.id == current.id) ? (
               <Btn
               variant="outlined"
