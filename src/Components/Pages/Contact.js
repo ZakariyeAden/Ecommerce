@@ -106,7 +106,7 @@ const showForm = (
 );
   return (
     <Container>
-      <div className="bg-img contact-bg">
+      <div className="bg-img contact-bg bg-img-">
         <div className="text-box">
           <ShopHeading>Contact Us</ShopHeading>
         </div>
