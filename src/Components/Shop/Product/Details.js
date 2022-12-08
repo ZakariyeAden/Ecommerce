@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import { Link } from "react-router-dom";
 import {
   Grid,
   Button,
@@ -19,7 +17,7 @@ import {
   DetailImg,
 } from "../../Style/style-components";
 
-const Details = ({ current, addToCart,   }) => {
+const Details = ({ current, addToCart,cart   }) => {
  
 //  const [currentSelection, setCurrentSelection ] = ('');
 
@@ -68,16 +66,24 @@ const Details = ({ current, addToCart,   }) => {
               </Select>
             </FormControl> */}
          
-            <Btn
+            {cart.some((p) => p.id == current.id) ? (
+              <Btn
+              variant="outlined"
+            >
+              Added to Cart
+            </Btn>
+            ) : (
+              <Btn
               onClick={() => {
                 addToCart(current.id, );
-                
                 Modal();
               }}
               variant="outlined"
             >
               Add to Cart
             </Btn>
+             
+            )}
           </ColumnGap>
         </Grid>
       </Grid>
