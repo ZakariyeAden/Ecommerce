@@ -134,6 +134,10 @@ export const ContactHeading = styled.h3`
   font-style: normal;
   text-align: center;
   margin-top: 2rem;
+
+  @media (max-width:425px ) {
+    font-size: 1rem;
+  }
 `;
 export const Column = styled.div`
   display: flex;
@@ -181,5 +185,5 @@ export const CartHeading = styled.h4`
 // Form Section
 // ****************************//
 export const FormSection = styled.section`
-  height: 100vh;
+   padding: 8rem 0rem;
 `;
