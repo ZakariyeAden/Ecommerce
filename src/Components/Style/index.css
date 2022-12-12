@@ -189,7 +189,7 @@ label {
 .form-input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #5264ae;
+  color: #414141;
 }
 /* ******************* */
 /* BOTTOM BARS         */
@@ -206,7 +206,7 @@ label {
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #5264ae;
+  background: #414141;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
