@@ -74,6 +74,9 @@
   transform: translateY(14px) rotate(45deg);
   transition: transform 0.2s ease-in-out;
 }
+/* ************** */
+/* Media Querys  */
+/* ************** */
 @media (max-width: 2560px) {
   .menu-links {
     display: none;

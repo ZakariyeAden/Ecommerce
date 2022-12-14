@@ -245,7 +245,9 @@ label {
   margin-top: 5rem;
   font-size: 1rem;
 }
-
+/* ************** */
+/* Media Querys  */
+/* ************** */
 @media (max-width: 425px) {
  .form {
   width: 416px;
